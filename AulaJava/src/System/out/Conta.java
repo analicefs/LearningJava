@@ -3,16 +3,22 @@ package System.out;
 public class Conta {
 	private String numero;
 	private double saldo;
+	private String usuario;
 	
-public  Conta(){
+	public  Conta(){
 	this.numero=numero;
+	this.usuario=usuario;
 }
+public String getUsuário() {
+		return this.usuario;
+}
+
 public String getNumero() {
 	return this.numero;
 }
 	
 public double getSaldo() {
-		return saldo;
+		return this.saldo;
 	}
 	
 public Conta(String numero) {
@@ -26,10 +32,12 @@ public void Debitar(double valor) {
 	
 	}
 public static void main(String[] args) {
-		Conta p= new Conta();
+		Conta p= new Conta("001");
 
-		
-		System.out.println("");
+		System.out.println("Numero da conta é:");
 	}
+
+
+
 
 }
