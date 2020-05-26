@@ -5,10 +5,15 @@ public class Conta {
 	private double saldo;
 	private String usuario;
 	
-	public  Conta(){
+	
+	public  Conta(String numero, double saldo){
 	this.numero=numero;
 	this.usuario=usuario;
 }
+	public Conta(String numero, double c, double s){
+	this( numero ,0.0);
+}
+	
 public String getUsuário() {
 		return this.usuario;
 }
@@ -25,19 +30,19 @@ public Conta(String numero) {
 		this.numero=numero;
 	}
 public void Creditar(double valor) {
-		this.saldo+=valor;
+		this.saldo=this.saldo+valor;
 	}
 public void Debitar(double valor) {
-		this.saldo= saldo-valor;
+		this.saldo -= valor;
 	
 	}
-public static void main(String[] args) {
-		Conta p= new Conta("001");
-
-		System.out.println("Numero da conta é:");
+public void DetalhesdaConta() {
+	System.out.println("numero ="+ this.numero);
+	System.out.println("Saldo ="+ this.saldo);	
+}
+//public static void main(String[] args) {
+		
 	}
 
 
 
-
-}
